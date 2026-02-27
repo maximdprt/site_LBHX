@@ -20,14 +20,7 @@ Ouvre [http://localhost:3000](http://localhost:3000).
 
 ## Vidéo teaser
 
-La vidéo `Teaser LBHX.mp4` (130 Mo) dépasse la limite GitHub de 100 Mo et n'est pas dans le repo.
-
-**Après clonage**, placez le fichier ici :
-```
-public/videos/Teaser LBHX.mp4
-```
-
-Elle servira de fond vidéo dans la section Hero.
+La vidéo compressée `Teaser-LBHX-compressed.mp4` (~55 Mo) est incluse et sert de fond vidéo dans la section Hero.
 
 ## Build
 

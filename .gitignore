@@ -29,7 +29,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-# Video teaser - exceeds GitHub 100MB limit, add manually: public/videos/Teaser LBHX.mp4
+# Original video (130MB) - use compressed version instead
 /public/videos/Teaser LBHX.mp4
 
 # typescript
