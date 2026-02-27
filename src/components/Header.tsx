@@ -50,13 +50,13 @@ export default function Header() {
             <img
               src="/images/story.psd.png"
               alt="Logo LBHX"
-              className="h-12 md:h-16 w-auto drop-shadow-lg brightness-0 invert"
+              className="h-12 md:h-16 w-auto drop-shadow-lg"
             />
             <div className="flex flex-col leading-tight">
               <span className="text-white font-bold text-base md:text-lg tracking-tight">
                 LBHX
               </span>
-              <span className="text-jaune-sable text-[10px] md:text-xs font-medium hidden sm:block">
+              <span className="text-bleu-clair text-[10px] md:text-xs font-medium hidden sm:block">
                 Beach Handball Xperience
               </span>
             </div>
@@ -72,7 +72,7 @@ export default function Header() {
                   e.preventDefault();
                   handleClick(link.href);
                 }}
-                className="px-3 py-2 text-sm text-white/90 hover:text-jaune-sable font-medium transition-colors duration-200 rounded-md hover:bg-white/10"
+                className="px-3 py-2 text-sm text-white/90 hover:text-bleu-clair font-medium transition-colors duration-200 rounded-md hover:bg-white/10"
               >
                 {link.label}
               </a>
@@ -126,7 +126,7 @@ export default function Header() {
                 e.preventDefault();
                 handleClick(link.href);
               }}
-              className="block px-4 py-3 text-white/90 hover:text-jaune-sable hover:bg-white/10 rounded-md font-medium transition-colors"
+              className="block px-4 py-3 text-white/90 hover:text-bleu-clair hover:bg-white/10 rounded-md font-medium transition-colors"
             >
               {link.label}
             </a>

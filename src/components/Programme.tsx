@@ -7,7 +7,7 @@ const events = [
     date: "11 Juin",
     title: "Soirée Partenaires",
     description: "Lancement officiel avec nos partenaires pour ouvrir les festivités.",
-    accent: "bg-jaune-sable",
+    accent: "bg-bleu-clair",
   },
   {
     date: "12 Juin",
@@ -32,7 +32,7 @@ const events = [
     date: "13–14 Juin",
     title: "Tournoi Jeunes & Shoot-out Contest",
     description: "Place à la relève ! Tournoi dédié aux jeunes talents et concours de tirs spectaculaires.",
-    accent: "bg-jaune-sable",
+    accent: "bg-bleu-clair",
   },
   {
     date: "Dimanche 14 Juin",
@@ -148,7 +148,7 @@ export default function Programme() {
                 >
                   <div className="bg-white/80 backdrop-blur-sm border border-bleu-clair/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <span
-                      className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 ${event.accent} ${event.accent === "bg-jaune-sable" ? "text-bleu-atlantique" : "text-white"}`}
+                      className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white mb-3 ${event.accent}`}
                     >
                       {event.date}
                     </span>

@@ -69,7 +69,7 @@ export default function Concept() {
 
             {/* Decorative blobs */}
             <div className="absolute -top-6 -left-6 w-28 h-28 bg-orange-vif/10 rounded-full blur-2xl -z-10" />
-            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-jaune-sable/15 rounded-full blur-2xl -z-10" />
+            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-bleu-clair/15 rounded-full blur-2xl -z-10" />
           </motion.div>
 
           {/* Right: Text content (2 cols) */}
@@ -95,7 +95,7 @@ export default function Concept() {
             <div className="bg-bleu-atlantique rounded-2xl p-6 md:p-8 shadow-lg mb-6">
               <p className="text-base md:text-lg leading-relaxed text-white/90">
                 Plus qu&apos;un simple tournoi, c&apos;est une véritable{" "}
-                <span className="text-jaune-sable font-semibold">
+                <span className="text-bleu-clair font-semibold">
                   vitrine du Beach Handball
                 </span>{" "}
                 où le public peut aussi découvrir la discipline grâce à des
@@ -121,8 +121,8 @@ export default function Concept() {
                   Mixte
                 </span>
               </div>
-              <div className="flex items-center gap-2 bg-jaune-sable/15 border border-jaune-sable/25 px-4 py-2.5 rounded-xl">
-                <svg className="w-5 h-5 text-orange-vif" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center gap-2 bg-bleu-clair/15 border border-bleu-clair/25 px-4 py-2.5 rounded-xl">
+                <svg className="w-5 h-5 text-bleu-clair" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
                 <span className="text-sm font-semibold text-bleu-atlantique">

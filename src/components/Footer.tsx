@@ -12,10 +12,10 @@ export default function Footer() {
               <img
                 src="/images/story.psd.png"
                 alt="Logo LBHX"
-                className="h-14 w-auto drop-shadow-lg brightness-0 invert"
+                className="h-14 w-auto drop-shadow-lg"
               />
               <h3 className="text-2xl font-bold">
-                <span className="text-jaune-sable">LBHX</span>
+                <span className="text-bleu-clair">LBHX</span>
               </h3>
             </div>
             <p className="text-white/70 leading-relaxed mb-6">
@@ -28,7 +28,7 @@ export default function Footer() {
                 href="https://www.facebook.com/lacanaubeachhandballxperience"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jaune-sable/30 transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bleu-clair/30 transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ export default function Footer() {
                 href="https://www.instagram.com/lacanaubeachhandballxperience"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-jaune-sable/30 transition-colors duration-300"
+                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bleu-clair/30 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Column 2 — Navigation */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-jaune-sable">
+            <h3 className="text-lg font-bold mb-4 text-bleu-clair">
               Navigation
             </h3>
             <ul className="space-y-3">
@@ -72,7 +72,7 @@ export default function Footer() {
                         .querySelector(link.href)
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
-                    className="text-white/70 hover:text-jaune-sable transition-colors duration-200"
+                    className="text-white/70 hover:text-bleu-clair transition-colors duration-200"
                   >
                     {link.label}
                   </a>
@@ -83,7 +83,7 @@ export default function Footer() {
 
           {/* Column 3 — Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-jaune-sable">
+            <h3 className="text-lg font-bold mb-4 text-bleu-clair">
               Contact
             </h3>
             <div className="space-y-4">
@@ -93,7 +93,7 @@ export default function Footer() {
                   Paul Mourioux —{" "}
                   <a
                     href="mailto:paulmourioux@yahoo.fr"
-                    className="text-jaune-sable hover:underline"
+                    className="text-bleu-clair hover:underline"
                   >
                     paulmourioux@yahoo.fr
                   </a>
@@ -102,7 +102,7 @@ export default function Footer() {
                   Carinne Laborde —{" "}
                   <a
                     href="mailto:carinnelaborde@yahoo.fr"
-                    className="text-jaune-sable hover:underline"
+                    className="text-bleu-clair hover:underline"
                   >
                     carinnelaborde@yahoo.fr
                   </a>
@@ -116,7 +116,7 @@ export default function Footer() {
                   Hubert Gaget —{" "}
                   <a
                     href="mailto:partenaires@lacanau-ocehand.fr"
-                    className="text-jaune-sable hover:underline"
+                    className="text-bleu-clair hover:underline"
                   >
                     partenaires@lacanau-ocehand.fr
                   </a>

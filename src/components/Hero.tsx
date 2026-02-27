@@ -21,15 +21,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <motion.img
-          src="/images/story.psd.png"
-          alt="Logo LBHX"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="w-40 sm:w-52 md:w-64 mb-6 brightness-0 invert drop-shadow-2xl"
-        />
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,7 +29,7 @@ export default function Hero() {
         >
           Lacanau Beach
           <br />
-          <span className="text-jaune-sable">Handball Xperience</span>
+          <span className="text-bleu-clair">Handball Xperience</span>
         </motion.h1>
 
         <motion.h2
@@ -54,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-6 text-xl sm:text-2xl md:text-3xl text-jaune-sable font-semibold text-shadow"
+          className="mt-6 text-xl sm:text-2xl md:text-3xl text-bleu-clair font-semibold text-shadow"
         >
           Du 12 au 14 juin 2026
         </motion.p>
