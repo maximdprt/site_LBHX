@@ -10,9 +10,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/images/WhatsApp_Image_2026-02-24_at_20.40.11-removebg-preview (1).png"
+                src="/images/story.psd.png"
                 alt="Logo LBHX"
-                className="h-14 w-auto drop-shadow-lg"
+                className="h-14 w-auto drop-shadow-lg brightness-0 invert"
               />
               <h3 className="text-2xl font-bold">
                 <span className="text-jaune-sable">LBHX</span>

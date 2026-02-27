@@ -73,26 +73,48 @@ export default function Programme() {
           </p>
         </motion.div>
 
-        {/* Featured photo */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 relative overflow-hidden rounded-2xl shadow-2xl max-w-3xl mx-auto"
-        >
-          <img
-            src="/images/IMG_7615.jpg"
-            alt="Coucher de soleil sur le terrain de Beach Handball à Lacanau"
-            className="w-full h-[300px] md:h-[400px] object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-bleu-atlantique/60 via-transparent to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6 text-white">
-            <p className="text-lg md:text-xl font-semibold text-shadow">
-              Matchs au coucher de soleil face à l&apos;Atlantique
-            </p>
-          </div>
-        </motion.div>
+        {/* Photo gallery */}
+        <div className="grid md:grid-cols-3 gap-4 mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-2 relative overflow-hidden rounded-2xl shadow-2xl"
+          >
+            <img
+              src="/images/IMG_7615.jpg"
+              alt="Coucher de soleil sur le terrain de Beach Handball à Lacanau"
+              className="w-full h-[250px] md:h-[350px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-bleu-atlantique/60 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 text-white">
+              <p className="text-base md:text-lg font-semibold text-shadow">
+                Matchs au coucher de soleil face à l&apos;Atlantique
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="relative overflow-hidden rounded-2xl shadow-2xl"
+          >
+            <img
+              src="/images/DSC01964.jpg"
+              alt="Match nocturne au LBHX"
+              className="w-full h-[250px] md:h-[350px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-bleu-atlantique/60 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 text-white">
+              <p className="text-base md:text-lg font-semibold text-shadow">
+                Compétition nocturne
+              </p>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Timeline */}
         <div className="relative">

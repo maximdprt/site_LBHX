@@ -37,8 +37,17 @@ const engagements = [
 
 export default function Engagements() {
   return (
-    <section id="engagements" className="py-20 md:py-28 bg-bleu-atlantique text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="engagements" className="relative py-20 md:py-28 bg-bleu-atlantique text-white overflow-hidden">
+      {/* Background photo */}
+      <div className="absolute inset-0">
+        <img
+          src="/images/IMG_7621.jpg"
+          alt=""
+          className="w-full h-full object-cover opacity-[0.08]"
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

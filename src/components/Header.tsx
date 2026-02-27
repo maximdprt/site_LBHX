@@ -48,9 +48,9 @@ export default function Header() {
             className="flex items-center gap-3"
           >
             <img
-              src="/images/WhatsApp_Image_2026-02-24_at_20.40.11-removebg-preview (1).png"
+              src="/images/story.psd.png"
               alt="Logo LBHX"
-              className="h-12 md:h-16 w-auto drop-shadow-lg"
+              className="h-12 md:h-16 w-auto drop-shadow-lg brightness-0 invert"
             />
             <div className="flex flex-col leading-tight">
               <span className="text-white font-bold text-base md:text-lg tracking-tight">

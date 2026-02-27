@@ -21,10 +21,19 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <motion.img
+          src="/images/story.psd.png"
+          alt="Logo LBHX"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="w-40 sm:w-52 md:w-64 mb-6 brightness-0 invert drop-shadow-2xl"
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="text-4xl sm:text-5xl md:text-7xl font-bold text-white text-shadow-lg leading-tight"
         >
           Lacanau Beach
