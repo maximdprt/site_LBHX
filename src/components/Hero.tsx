@@ -20,39 +20,17 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-bleu-atlantique/80" />
 
       {/* Content - pt compensates fixed header to avoid overlap */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-20 md:pt-24 pb-8">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-20 md:pt-24 pb-8">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-shadow-lg leading-tight"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-shadow-lg leading-tight text-center"
         >
-          Lacanau Beach
-          <br />
-          <span className="text-white">Handball Xperience</span>
-        </motion.h1>
-
-        <div className="flex items-center justify-center gap-4 mt-3 mb-1">
-          <motion.img
-            src="/images/story.psd.png"
-            alt="Logo LBHX"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="w-28 sm:w-36 md:w-44 lg:w-52 drop-shadow-2xl"
-          />
-          <motion.img
-            src="/images/582435732_18066701483604467_333419534526596813_n.jpg"
-            alt="Logo Club Handball Lacanau"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 object-cover rounded-full drop-shadow-2xl ring-2 ring-white/30"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
-        </div>
+            Lacanau Beach
+            <br />
+            <span className="text-white">Handball Xperience</span>
+          </motion.h1>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

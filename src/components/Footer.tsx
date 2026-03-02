@@ -12,6 +12,22 @@ export default function Footer() {
               Lacanau Beach Handball Xperience — Le concept N°1 de Beach
               Handball en France. Du 12 au 14 juin 2026 à Lacanau Océan.
             </p>
+            {/* Logos */}
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src="/images/story.psd.png"
+                alt="Logo LBHX"
+                className="h-24 w-24 md:h-32 md:w-32 object-contain drop-shadow-lg"
+              />
+              <img
+                src="/images/582435732_18066701483604467_333419534526596813_n.jpg"
+                alt="Logo Club Handball Lacanau"
+                className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover drop-shadow-lg ring-2 ring-white/30"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
+            </div>
             {/* Social links */}
             <div className="flex gap-4">
               <a
