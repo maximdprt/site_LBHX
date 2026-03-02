@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const partners = [
-  { name: "FFHandball + Ligue + Comité", logo: "/logo/ffHB + Ligue + comité.png" },
+  { name: "FFHandball + Ligue + Comité", logo: "/logo/ffHB-Ligue-Comite.png" },
   { name: "Médoc Atlantique", logo: "/logo/medoc atlantique.png" },
   { name: "Gironde le Département", logo: "/logo/Gironde le departement.png" },
   { name: "Café Maritime", logo: "/logo/café maritime.png" },
@@ -24,7 +24,7 @@ function LogoCard({ name, logo }: { name: string; logo: string }) {
     <div className="flex-shrink-0 mx-4 md:mx-6">
       <div className="w-44 md:w-52 h-24 md:h-28 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center p-4 hover:shadow-lg transition-shadow duration-300">
         <img
-          src={logo}
+          src={encodeURI(logo)}
           alt={name}
           title={name}
           className="max-h-16 md:max-h-20 max-w-full object-contain"
