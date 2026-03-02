@@ -4,21 +4,23 @@ import { motion } from "framer-motion";
 
 interface Partner {
   name: string;
-  logo?: string;
+  logo: string;
 }
 
 const partners: Partner[] = [
-  { name: "EHF Beach Handball", logo: "/images/partenaires/ehf-ebt.png" },
-  { name: "Ville de Lacanau", logo: "/images/partenaires/ville-lacanau.png" },
-  { name: "Médoc Atlantique", logo: "/images/partenaires/medoc-atlantique.png" },
-  { name: "FFHandball", logo: "/images/partenaires/ffhandball.png" },
-  { name: "Gironde Habitat", logo: "/images/partenaires/gironde-habitat.png" },
-  { name: "SMICOTOM", logo: "/images/partenaires/smicotom.png" },
-  { name: "ONF", logo: "/images/partenaires/onf.png" },
-  { name: "Région Nouvelle-Aquitaine", logo: "/images/partenaires/nouvelle-aquitaine.png" },
-  { name: "Département Gironde", logo: "/images/partenaires/gironde.png" },
-  { name: "Café Maritime", logo: "/images/partenaires/cafe-maritime.png" },
-  { name: "Caraïbos", logo: "/images/partenaires/caraibos.png" },
+  { name: "FFHandball + Ligue + Comité", logo: "/logo/ffHB + Ligue + comité.png" },
+  { name: "Médoc Atlantique", logo: "/logo/medoc atlantique.png" },
+  { name: "Gironde le Département", logo: "/logo/Gironde le departement.png" },
+  { name: "Café Maritime", logo: "/logo/café maritime.png" },
+  { name: "Caraïbos", logo: "/logo/caraibos.png" },
+  { name: "ON AIR", logo: "/logo/ON AIR.png" },
+  { name: "Efficity", logo: "/logo/efficity.png" },
+  { name: "Gedimat", logo: "/logo/gedimat.png" },
+  { name: "La Canaulaise", logo: "/logo/la canaulaise.png" },
+  { name: "Les Briconautes", logo: "/logo/les briconautes.png" },
+  { name: "Sunset Lacanau", logo: "/logo/sunset Lacanau.png" },
+  { name: "Vital Parc", logo: "/logo/vital parc.png" },
+  { name: "Banana", logo: "/logo/banana.png" },
 ];
 
 export default function Partenaires() {
@@ -54,36 +56,16 @@ export default function Partenaires() {
               key={index}
               className="flex-shrink-0 mx-6 flex items-center justify-center"
             >
-              <div className="w-48 h-24 bg-blanc-sable border border-bleu-clair/10 rounded-xl flex items-center justify-center px-4 hover:shadow-md transition-shadow duration-300">
-                {partner.logo ? (
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-h-16 max-w-full object-contain"
-                    onError={(e) => {
-                      const el = e.target as HTMLImageElement;
-                      el.style.display = "none";
-                      const span = document.createElement("span");
-                      span.className = "text-sm font-semibold text-bleu-atlantique/60 text-center";
-                      span.textContent = partner.name;
-                      el.parentElement?.appendChild(span);
-                    }}
-                  />
-                ) : (
-                  <span className="text-sm font-semibold text-bleu-atlantique/60 text-center">
-                    {partner.name}
-                  </span>
-                )}
+              <div className="w-52 h-28 bg-blanc-sable border border-bleu-clair/10 rounded-xl flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300">
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="max-h-20 max-w-full object-contain"
+                />
               </div>
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 text-center">
-        <p className="text-sm text-bleu-atlantique/40">
-          Placez les logos dans public/images/partenaires/ pour les afficher
-        </p>
       </div>
     </section>
   );
