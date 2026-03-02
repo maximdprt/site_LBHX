@@ -21,6 +21,15 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+        <motion.img
+          src="/images/story.psd.png"
+          alt="Logo LBHX"
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="w-48 sm:w-60 md:w-72 lg:w-80 mb-8 drop-shadow-2xl"
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,7 +70,7 @@ export default function Hero() {
               .querySelector("#concept")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="mt-10 inline-block bg-orange-vif hover:bg-orange-600 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+          className="mt-10 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
         >
           Découvrir l&apos;événement
         </motion.a>

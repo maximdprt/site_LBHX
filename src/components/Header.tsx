@@ -9,8 +9,11 @@ const navLinks = [
   { label: "Engagements", href: "#engagements" },
   { label: "Chiffres Clés", href: "#chiffres" },
   { label: "Partenaires", href: "#partenaires" },
+  { label: "Boutique", href: "#boutique" },
   { label: "Contact", href: "#contact" },
 ];
+
+const HELLOASSO_URL = "https://www.helloasso.com/associations/lacanau-ocean-handball/evenements/lacanau-beach-handball-xperience-2026";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -57,7 +60,7 @@ export default function Header() {
                 LBHX
               </span>
               <span className="text-bleu-clair text-[10px] md:text-xs font-medium hidden sm:block">
-                Beach Handball Xperience
+                Lacanau Beach Handball Xperience
               </span>
             </div>
           </a>
@@ -77,14 +80,31 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
+            <a
+              href={HELLOASSO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Inscrire mon équipe
+            </a>
           </nav>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors"
-            aria-label="Menu"
-          >
+          {/* Mobile: inscription + hamburger */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={HELLOASSO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-3 py-2 rounded-full shadow-md transition-all duration-300"
+            >
+              Inscription
+            </a>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="text-white p-2 rounded-md hover:bg-white/10 transition-colors"
+              aria-label="Menu"
+            >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -108,6 +128,7 @@ export default function Header() {
               )}
             </svg>
           </button>
+          </div>
         </div>
       </div>
 

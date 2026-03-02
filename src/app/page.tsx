@@ -5,6 +5,7 @@ import Programme from "@/components/Programme";
 import Engagements from "@/components/Engagements";
 import ChiffresCles from "@/components/ChiffresCles";
 import Partenaires from "@/components/Partenaires";
+import Boutique from "@/components/Boutique";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <Engagements />
         <ChiffresCles />
         <Partenaires />
+        <Boutique />
       </main>
       <Footer />
     </>

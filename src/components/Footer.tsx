@@ -8,15 +8,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Column 1 — About */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-4 mb-4">
               <img
                 src="/images/story.psd.png"
                 alt="Logo LBHX"
                 className="h-14 w-auto drop-shadow-lg"
               />
-              <h3 className="text-2xl font-bold">
-                <span className="text-bleu-clair">LBHX</span>
-              </h3>
+              <img
+                src="/images/logo-club.png"
+                alt="Logo Club Handball Lacanau"
+                className="h-14 w-auto drop-shadow-lg"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
             </div>
             <p className="text-white/70 leading-relaxed mb-6">
               Lacanau Beach Handball Xperience — Le concept N°1 de Beach
@@ -25,7 +30,7 @@ export default function Footer() {
             {/* Social links */}
             <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/lacanaubeachhandballxperience"
+                href="https://www.facebook.com/profile.php?id=100083049498285"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bleu-clair/30 transition-colors duration-300"
@@ -36,7 +41,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/lacanaubeachhandballxperience"
+                href="https://www.instagram.com/lacanau_beach_handball_xperie/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bleu-clair/30 transition-colors duration-300"
@@ -62,6 +67,7 @@ export default function Footer() {
                 { label: "Engagements", href: "#engagements" },
                 { label: "Chiffres Clés", href: "#chiffres" },
                 { label: "Partenaires", href: "#partenaires" },
+                { label: "Boutique", href: "#boutique" },
               ].map((link) => (
                 <li key={link.href}>
                   <a

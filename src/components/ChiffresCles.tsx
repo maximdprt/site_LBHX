@@ -34,11 +34,9 @@ const stats = [
     sublabel: "Fédération Européenne de Handball",
     isText: true,
     displayText: "EHF",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-      </svg>
-    ),
+    isLogo: true,
+    logoSrc: "/images/logo-ehf-ebt.png",
+    icon: null,
   },
 ];
 
@@ -72,7 +70,19 @@ export default function ChiffresCles() {
               className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-bleu-clair/10"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-bleu-clair/10 text-bleu-clair mb-6">
-                {stat.icon}
+                {"isLogo" in stat && stat.isLogo ? (
+                  <img
+                    src={stat.logoSrc as string}
+                    alt="Logo EHF EBT"
+                    className="w-12 h-12 object-contain"
+                    onError={(e) => {
+                      const parent = (e.target as HTMLImageElement).parentElement;
+                      if (parent) parent.innerHTML = '<span class="text-2xl font-bold">EHF</span>';
+                    }}
+                  />
+                ) : (
+                  stat.icon
+                )}
               </div>
               <div className="text-4xl md:text-5xl font-bold text-bleu-atlantique mb-2">
                 {"isText" in stat && stat.isText ? (
