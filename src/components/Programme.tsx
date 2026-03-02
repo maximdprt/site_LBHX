@@ -45,13 +45,13 @@ const events = [
 
 export default function Programme() {
   return (
-    <section id="programme" className="relative py-20 md:py-28 bg-white overflow-hidden">
+    <section id="programme" className="relative py-20 md:py-28 bg-bleu-atlantique overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
           src="/images/IMG_7615.jpg"
           alt=""
-          className="w-full h-full object-cover opacity-10"
+          className="w-full h-full object-cover opacity-[0.08]"
         />
       </div>
 
@@ -64,11 +64,11 @@ export default function Programme() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-bleu-atlantique">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
             Programme 2026
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
-          <p className="mt-4 text-bleu-atlantique/60 text-lg">
+          <p className="mt-4 text-white/80 text-lg">
             Lacanau Océan — Maison de la Glisse
           </p>
         </motion.div>
@@ -139,7 +139,7 @@ export default function Programme() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-bleu-clair/30 md:-translate-x-px" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-white/30 md:-translate-x-px" />
 
           {events.map((event, index) => {
             const isLeft = index % 2 === 0;
@@ -156,7 +156,7 @@ export default function Programme() {
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-white shadow-md -translate-x-1/2 z-10">
+                <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-bleu-atlantique shadow-md -translate-x-1/2 z-10">
                   <div className={`w-full h-full rounded-full ${event.accent}`} />
                 </div>
 
@@ -166,16 +166,16 @@ export default function Programme() {
                     isLeft ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
                   }`}
                 >
-                  <div className="bg-white/80 backdrop-blur-sm border border-bleu-clair/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <span
                       className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white mb-3 ${event.accent}`}
                     >
                       {event.date}
                     </span>
-                    <h3 className="text-lg md:text-xl font-bold text-bleu-atlantique">
+                    <h3 className="text-lg md:text-xl font-bold text-white">
                       {event.title}
                     </h3>
-                    <p className="mt-2 text-sm md:text-base text-bleu-atlantique/70">
+                    <p className="mt-2 text-sm md:text-base text-white/90">
                       {event.description}
                     </p>
                   </div>

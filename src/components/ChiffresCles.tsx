@@ -35,14 +35,14 @@ const stats = [
     isText: true,
     displayText: "EHF",
     isLogo: true,
-    logoSrc: "/images/logo-ehf-ebt.png",
+    logoSrc: "/logo/EHF_EBT_logo_pos.png",
     icon: null,
   },
 ];
 
 export default function ChiffresCles() {
   return (
-    <section id="chiffres" className="py-20 md:py-28 bg-blanc-sable">
+    <section id="chiffres" className="py-20 md:py-28 bg-bleu-atlantique">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section title */}
         <motion.div
@@ -52,7 +52,7 @@ export default function ChiffresCles() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-bleu-atlantique">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
             Chiffres Clés
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
@@ -67,9 +67,9 @@ export default function ChiffresCles() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-bleu-clair/10"
+              className="bg-white/10 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/20"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-bleu-clair/10 text-bleu-clair mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/15 text-white mb-6">
                 {"isLogo" in stat && stat.isLogo ? (
                   <img
                     src={stat.logoSrc as string}
@@ -84,7 +84,7 @@ export default function ChiffresCles() {
                   stat.icon
                 )}
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-bleu-atlantique mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                 {"isText" in stat && stat.isText ? (
                   <span>{stat.displayText}</span>
                 ) : (
@@ -95,10 +95,10 @@ export default function ChiffresCles() {
                   />
                 )}
               </div>
-              <p className="text-lg font-semibold text-bleu-atlantique/80">
+              <p className="text-lg font-semibold text-white">
                 {stat.label}
               </p>
-              <p className="text-sm text-bleu-atlantique/50 mt-1">
+              <p className="text-sm text-white/80 mt-1">
                 {stat.sublabel}
               </p>
             </motion.div>

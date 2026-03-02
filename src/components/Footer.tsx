@@ -8,29 +8,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Column 1 — About */}
           <div>
-            <div className="flex items-center gap-4 mb-4">
-              <img
-                src="/images/story.psd.png"
-                alt="Logo LBHX"
-                className="h-14 w-auto drop-shadow-lg"
-              />
-              <img
-                src="/images/logo-club.png"
-                alt="Logo Club Handball Lacanau"
-                className="h-14 w-auto drop-shadow-lg"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
-            </div>
-            <p className="text-white/70 leading-relaxed mb-6">
+            <p className="text-white leading-relaxed mb-6">
               Lacanau Beach Handball Xperience — Le concept N°1 de Beach
               Handball en France. Du 12 au 14 juin 2026 à Lacanau Océan.
             </p>
             {/* Social links */}
             <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/profile.php?id=100083049498285"
+                href="https://www.facebook.com/LacanauBeachHandXperience/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bleu-clair/30 transition-colors duration-300"
@@ -41,7 +26,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/lacanau_beach_handball_xperie/"
+                href="https://www.instagram.com/lacanauxperience"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bleu-clair/30 transition-colors duration-300"
@@ -56,18 +41,16 @@ export default function Footer() {
 
           {/* Column 2 — Navigation */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-bleu-clair">
+            <h3 className="text-lg font-bold mb-4 text-white">
               Navigation
             </h3>
             <ul className="space-y-3">
               {[
                 { label: "Accueil", href: "#accueil" },
-                { label: "Le Concept", href: "#concept" },
-                { label: "Programme 2026", href: "#programme" },
-                { label: "Engagements", href: "#engagements" },
-                { label: "Chiffres Clés", href: "#chiffres" },
+                { label: "Programme", href: "#programme" },
                 { label: "Partenaires", href: "#partenaires" },
                 { label: "Boutique", href: "#boutique" },
+                { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.href}>
                   <a
@@ -78,7 +61,7 @@ export default function Footer() {
                         .querySelector(link.href)
                         ?.scrollIntoView({ behavior: "smooth" });
                     }}
-                    className="text-white/70 hover:text-bleu-clair transition-colors duration-200"
+                    className="text-white hover:text-white/90 transition-colors duration-200"
                   >
                     {link.label}
                   </a>
@@ -89,40 +72,40 @@ export default function Footer() {
 
           {/* Column 3 — Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-bleu-clair">
+            <h3 className="text-lg font-bold mb-4 text-white">
               Contact
             </h3>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-white/50 mb-1">Organisation</p>
-                <p className="text-white/80">
+                <p className="text-sm text-white/80 mb-1">Organisation</p>
+                <p className="text-white">
                   Paul Mourioux —{" "}
                   <a
                     href="mailto:paulmourioux@yahoo.fr"
-                    className="text-bleu-clair hover:underline"
+                    className="text-white hover:underline"
                   >
                     paulmourioux@yahoo.fr
                   </a>
                 </p>
-                <p className="text-white/80 mt-1">
+                <p className="text-white mt-1">
                   Carinne Laborde —{" "}
                   <a
                     href="mailto:carinnelaborde@yahoo.fr"
-                    className="text-bleu-clair hover:underline"
+                    className="text-white hover:underline"
                   >
                     carinnelaborde@yahoo.fr
                   </a>
                 </p>
               </div>
               <div>
-                <p className="text-sm text-white/50 mb-1">
+                <p className="text-sm text-white/80 mb-1">
                   Commission Partenaires
                 </p>
-                <p className="text-white/80">
+                <p className="text-white">
                   Hubert Gaget —{" "}
                   <a
                     href="mailto:partenaires@lacanau-ocehand.fr"
-                    className="text-bleu-clair hover:underline"
+                    className="text-white hover:underline"
                   >
                     partenaires@lacanau-ocehand.fr
                   </a>
@@ -136,11 +119,11 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-white/80">
             &copy; 2026 LBHX — Lacanau Beach Handball Xperience. Tous droits
             réservés.
           </p>
-          <p className="text-sm text-white/50">
+          <p className="text-sm text-white/80">
             Lacanau Océan — Maison de la Glisse — Entrée gratuite
           </p>
         </div>

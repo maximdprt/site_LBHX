@@ -2,12 +2,7 @@
 
 import { motion } from "framer-motion";
 
-interface Partner {
-  name: string;
-  logo: string;
-}
-
-const partners: Partner[] = [
+const partners = [
   { name: "FFHandball + Ligue + Comité", logo: "/logo/ffHB + Ligue + comité.png" },
   { name: "Médoc Atlantique", logo: "/logo/medoc atlantique.png" },
   { name: "Gironde le Département", logo: "/logo/Gironde le departement.png" },
@@ -21,13 +16,28 @@ const partners: Partner[] = [
   { name: "Sunset Lacanau", logo: "/logo/sunset Lacanau.png" },
   { name: "Vital Parc", logo: "/logo/vital parc.png" },
   { name: "Banana", logo: "/logo/banana.png" },
+  { name: "EHF EBT", logo: "/logo/EHF_EBT_logo_pos.png" },
 ];
+
+function LogoCard({ name, logo }: { name: string; logo: string }) {
+  return (
+    <div className="flex-shrink-0 mx-4 md:mx-6">
+      <div className="w-44 md:w-52 h-24 md:h-28 bg-white/10 border border-white/20 rounded-xl flex items-center justify-center p-4 hover:shadow-lg transition-shadow duration-300">
+        <img
+          src={logo}
+          alt={name}
+          title={name}
+          className="max-h-16 md:max-h-20 max-w-full object-contain"
+        />
+      </div>
+    </div>
+  );
+}
 
 export default function Partenaires() {
   return (
-    <section id="partenaires" className="py-20 md:py-28 bg-white overflow-hidden">
+    <section id="partenaires" className="py-20 md:py-28 bg-bleu-atlantique overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,35 +45,29 @@ export default function Partenaires() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-bleu-atlantique">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
             Nos Partenaires
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
-          <p className="mt-4 text-bleu-atlantique/60 text-lg">
+          <p className="mt-4 text-white/80 text-lg">
             Ils nous font confiance et rendent l&apos;événement possible
           </p>
         </motion.div>
       </div>
 
-      {/* Infinite marquee */}
+      {/* Marquee - two identical strips side by side for seamless loop */}
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-bleu-atlantique to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-bleu-atlantique to-transparent z-10 pointer-events-none" />
 
         <div className="flex animate-marquee w-max">
-          {[...partners, ...partners].map((partner, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 mx-6 flex items-center justify-center"
-            >
-              <div className="w-52 h-28 bg-blanc-sable border border-bleu-clair/10 rounded-xl flex items-center justify-center p-4 hover:shadow-md transition-shadow duration-300">
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-h-20 max-w-full object-contain"
-                />
-              </div>
-            </div>
+          {/* First copy */}
+          {partners.map((p, i) => (
+            <LogoCard key={`a-${i}`} name={p.name} logo={p.logo} />
+          ))}
+          {/* Second copy (identical, ensures seamless loop) */}
+          {partners.map((p, i) => (
+            <LogoCard key={`b-${i}`} name={p.name} logo={p.logo} />
           ))}
         </div>
       </div>

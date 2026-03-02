@@ -4,10 +4,7 @@ import { useState, useEffect } from "react";
 
 const navLinks = [
   { label: "Accueil", href: "#accueil" },
-  { label: "Le Concept", href: "#concept" },
-  { label: "Programme 2026", href: "#programme" },
-  { label: "Engagements", href: "#engagements" },
-  { label: "Chiffres Clés", href: "#chiffres" },
+  { label: "Programme", href: "#programme" },
   { label: "Partenaires", href: "#partenaires" },
   { label: "Boutique", href: "#boutique" },
   { label: "Contact", href: "#contact" },
@@ -41,28 +38,21 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
+          {/* Site name */}
           <a
             href="#accueil"
             onClick={(e) => {
               e.preventDefault();
               handleClick("#accueil");
             }}
-            className="flex items-center gap-3"
+            className="flex flex-col leading-tight"
           >
-            <img
-              src="/images/story.psd.png"
-              alt="Logo LBHX"
-              className="h-12 md:h-16 w-auto drop-shadow-lg"
-            />
-            <div className="flex flex-col leading-tight">
-              <span className="text-white font-bold text-base md:text-lg tracking-tight">
-                LBHX
-              </span>
-              <span className="text-bleu-clair text-[10px] md:text-xs font-medium hidden sm:block">
-                Lacanau Beach Handball Xperience
-              </span>
-            </div>
+            <span className="text-white font-bold text-xl md:text-2xl tracking-tight">
+              LBHX
+            </span>
+            <span className="text-white/90 text-xs md:text-sm font-medium hidden sm:block">
+              Lacanau Beach Handball Xperience
+            </span>
           </a>
 
           {/* Desktop nav */}
@@ -75,7 +65,7 @@ export default function Header() {
                   e.preventDefault();
                   handleClick(link.href);
                 }}
-                className="px-3 py-2 text-sm text-white/90 hover:text-bleu-clair font-medium transition-colors duration-200 rounded-md hover:bg-white/10"
+                className="px-3 py-2 text-base text-white hover:text-white/90 font-medium transition-colors duration-200 rounded-md hover:bg-white/10"
               >
                 {link.label}
               </a>
@@ -84,7 +74,7 @@ export default function Header() {
               href={HELLOASSO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+              className="ml-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-base px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Inscrire mon équipe
             </a>
@@ -96,7 +86,7 @@ export default function Header() {
               href={HELLOASSO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-3 py-2 rounded-full shadow-md transition-all duration-300"
+              className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-3 py-2 rounded-full shadow-md transition-all duration-300"
             >
               Inscription
             </a>
@@ -147,7 +137,7 @@ export default function Header() {
                 e.preventDefault();
                 handleClick(link.href);
               }}
-              className="block px-4 py-3 text-white/90 hover:text-bleu-clair hover:bg-white/10 rounded-md font-medium transition-colors"
+              className="block px-4 py-3 text-base text-white hover:text-white/90 hover:bg-white/10 rounded-md font-medium transition-colors"
             >
               {link.label}
             </a>

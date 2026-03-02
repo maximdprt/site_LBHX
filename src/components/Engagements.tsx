@@ -58,7 +58,7 @@ export default function Engagements() {
         >
           <h2 className="text-3xl md:text-5xl font-bold">Nos Engagements</h2>
           <div className="mt-4 w-24 h-1 bg-bleu-clair mx-auto rounded-full" />
-          <p className="mt-4 text-white/70 text-lg">
+          <p className="mt-4 text-white text-lg">
             Un événement responsable et inclusif
           </p>
         </motion.div>
@@ -74,13 +74,13 @@ export default function Engagements() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="group bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:border-bleu-clair/30 transition-all duration-300"
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-bleu-clair/15 text-bleu-clair mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/15 text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-4">
                 {item.title}
               </h3>
-              <p className="text-white/75 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 {item.description}
               </p>
             </motion.div>
