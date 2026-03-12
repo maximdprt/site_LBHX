@@ -77,7 +77,7 @@ export default function Edition2026() {
                 className="w-full h-48 md:h-52 object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
-                Plaquette Partenaires
+                {tr("edition.card.partners")}
               </div>
             </a>
 
@@ -94,7 +94,7 @@ export default function Edition2026() {
                 className="w-full h-48 md:h-52 object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
-                Plaquette équipes françaises
+                {tr("edition.card.frTeams")}
               </div>
             </a>
 
@@ -111,7 +111,7 @@ export default function Edition2026() {
                 className="w-full h-48 md:h-52 object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
-                Plaquette équipes anglaises
+                {tr("edition.card.enTeams")}
               </div>
             </a>
           </div>

@@ -13,23 +13,18 @@ export default function ChiffresCles() {
       suffix: "+",
       label: tr("chiffres.stat1.label"),
       sublabel: tr("chiffres.stat1.sublabel"),
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-        </svg>
-      ),
+      isLogo: true,
+      logoSrc: "/images/Descargar vector de diseño de icono de logotipo de ojo gratis.jpg",
+      icon: null,
     },
     {
       value: 25,
       suffix: "%",
       label: tr("chiffres.stat2.label"),
       sublabel: tr("chiffres.stat2.sublabel"),
-      icon: (
-        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      isLogo: true,
+      logoSrc: "/images/Globe_Logo_PNG-removebg-preview.png",
+      icon: null,
     },
     {
       value: 0,
@@ -70,12 +65,12 @@ export default function ChiffresCles() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="bg-white/10 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/20"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/15 text-white mb-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/15 text-white mb-6 overflow-hidden">
                 {stat.isLogo ? (
                   <img
-                    src={stat.logoSrc as string}
-                    alt="Logo EHF EBT"
-                    className="w-12 h-12 object-contain"
+                    src={encodeURI(stat.logoSrc as string)}
+                    alt={stat.label}
+                    className="w-full h-full object-contain"
                     onError={(e) => {
                       const parent = (e.target as HTMLImageElement).parentElement;
                       if (parent) parent.innerHTML = '<span class="text-2xl font-bold">EHF</span>';

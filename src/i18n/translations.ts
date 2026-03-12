@@ -33,6 +33,9 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.plaquettePartenaires": "Plaquette Partenaires",
     "edition.plaquetteFR": "Plaquette Participants (FR)",
     "edition.plaquetteEN": "Plaquette Participants (EN)",
+    "edition.card.partners": "Plaquette Partenaires",
+    "edition.card.frTeams": "Plaquette équipes françaises",
+    "edition.card.enTeams": "Plaquette équipes anglaises",
 
     // Concept
     "concept.title": "Le Concept",
@@ -133,6 +136,9 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.plaquettePartenaires": "Partners Brochure",
     "edition.plaquetteFR": "Participants Brochure (FR)",
     "edition.plaquetteEN": "Participants Brochure (EN)",
+    "edition.card.partners": "Partners brochure",
+    "edition.card.frTeams": "French teams brochure",
+    "edition.card.enTeams": "English teams brochure",
 
     "concept.title": "The Concept",
     "concept.tagInternational": "International competition",
@@ -225,6 +231,9 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.plaquettePartenaires": "Folleto Socios",
     "edition.plaquetteFR": "Folleto Participantes (FR)",
     "edition.plaquetteEN": "Folleto Participantes (EN)",
+    "edition.card.partners": "Folleto de socios",
+    "edition.card.frTeams": "Folleto equipos franceses",
+    "edition.card.enTeams": "Folleto equipos ingleses",
 
     "concept.title": "El Concepto",
     "concept.tagInternational": "Competición internacional",
@@ -317,6 +326,9 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.plaquettePartenaires": "Partner-Broschüre",
     "edition.plaquetteFR": "Teilnehmer-Broschüre (FR)",
     "edition.plaquetteEN": "Teilnehmer-Broschüre (EN)",
+    "edition.card.partners": "Partner-Broschüre",
+    "edition.card.frTeams": "Broschüre französische Teams",
+    "edition.card.enTeams": "Broschüre englische Teams",
 
     "concept.title": "Das Konzept",
     "concept.tagInternational": "Internationaler Wettbewerb",
