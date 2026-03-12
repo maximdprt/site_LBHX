@@ -28,7 +28,7 @@ export default function Footer() {
                 <img
                   src="/images/story.psd.png"
                   alt="Logo LBHX"
-                  className="w-full h-full object-contain scale-[2.05]"
+                  className="w-full h-full object-contain scale-[2.15]"
                 />
               </div>
               <div className="h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden ring-2 ring-white/30 bg-bleu-atlantique flex items-center justify-center">
