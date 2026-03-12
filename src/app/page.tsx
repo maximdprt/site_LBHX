@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Edition2026 from "@/components/Edition2026";
 import Concept from "@/components/Concept";
 import Programme from "@/components/Programme";
 import Engagements from "@/components/Engagements";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Edition2026 />
         <Concept />
         <Programme />
         <Engagements />

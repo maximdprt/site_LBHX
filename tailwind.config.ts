@@ -9,11 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "bleu-atlantique": "#1B3A5C",
-        "bleu-clair": "#2E86AB",
-        "jaune-sable": "#F5D547",
-        "orange-vif": "#FF6B35",
-        "blanc-sable": "#FFF8F0",
+        // Palette LBHX 2026
+        // Bleu marine foncé
+        "bleu-atlantique": "#1B3A6B",
+        // Bleu moyen (formes décoratives)
+        "bleu-clair": "#4A6FA5",
+        // Jaune (tenue arbitre)
+        "jaune-sable": "#F5C842",
+        // Rouge / corail principal (CTA, accents)
+        "orange-vif": "#E8334A",
+        // Blanc (fond principal)
+        "blanc-sable": "#FFFFFF",
+        // Rouge foncé (ombre / variantes)
+        "rouge-fonce": "#C4203A",
+        // Rose / magenta (éléments ponctuels si besoin)
+        "rose-magenta": "#E8557A",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

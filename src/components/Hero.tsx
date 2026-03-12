@@ -20,17 +20,27 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-bleu-atlantique/80" />
 
       {/* Content - pt compensates fixed header to avoid overlap */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-20 md:pt-24 pb-8">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-24 md:pt-28 pb-8">
+        {/* Logo au-dessus du titre */}
+        <motion.img
+          src="/images/story.psd.png"
+          alt="Logo LBHX"
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="w-32 sm:w-40 md:w-48 lg:w-56 mb-4 drop-shadow-2xl"
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-shadow-lg leading-tight text-center"
         >
             Lacanau Beach
             <br />
             <span className="text-white">Handball Xperience</span>
-          </motion.h1>
+        </motion.h1>
 
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
