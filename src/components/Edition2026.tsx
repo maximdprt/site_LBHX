@@ -55,41 +55,66 @@ export default function Edition2026() {
           </div>
         </motion.div>
 
-        {/* Liens de ressources */}
+        {/* Liens de ressources - uniquement images cliquables */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-12 grid gap-4 md:grid-cols-3"
+          className="mt-12 max-w-5xl mx-auto"
         >
-          <a
-            href="https://www.canva.com/design/DAG5JDpHfjs/vn2MwU30AQtyWoKOIwPLiA/edit?utm_content=DAG5JDpHfjs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
-          >
-            <span className="text-lg">📄</span>
-            <span>{tr("edition.plaquettePartenaires")}</span>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1Rv5l1lYGuMUXlYf4hx8-yq_YDt1k5eEm/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
-          >
-            <span className="text-lg">🇫🇷</span>
-            <span>{tr("edition.plaquetteFR")}</span>
-          </a>
-          <a
-            href="https://drive.google.com/file/d/1K3833shCZ1K0NdstoZxUIg2HmEWSyFZq/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
-          >
-            <span className="text-lg">🇬🇧</span>
-            <span>{tr("edition.plaquetteEN")}</span>
-          </a>
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Plaquette partenaires */}
+            <a
+              href="https://www.canva.com/design/DAG5JDpHfjs/vn2MwU30AQtyWoKOIwPLiA/edit?utm_content=DAG5JDpHfjs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <img
+                src="/images/plaquette_partenaire.png"
+                alt={tr("edition.plaquettePartenaires")}
+                className="w-full h-52 md:h-56 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+              />
+              <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
+                Plaquette Partenaires
+              </div>
+            </a>
+
+            {/* Plaquette FR */}
+            <a
+              href="https://drive.google.com/file/d/1Rv5l1lYGuMUXlYf4hx8-yq_YDt1k5eEm/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <img
+                src="/images/plaquette_francaise.png"
+                alt={tr("edition.plaquetteFR")}
+                className="w-full h-52 md:h-56 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+              />
+              <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
+                Plaquette équipes françaises
+              </div>
+            </a>
+
+            {/* Plaquette EN */}
+            <a
+              href="https://drive.google.com/file/d/1K3833shCZ1K0NdstoZxUIg2HmEWSyFZq/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+            >
+              <img
+                src="/images/plaquette_anglais.png"
+                alt={tr("edition.plaquetteEN")}
+                className="w-full h-52 md:h-56 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+              />
+              <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
+                Plaquette équipes anglaises
+              </div>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>
