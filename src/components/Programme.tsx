@@ -1,52 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const events = [
-  {
-    date: "11 Juin",
-    title: "Soirée Partenaires",
-    description: "Lancement officiel avec nos partenaires pour ouvrir les festivités.",
-    accent: "bg-bleu-clair",
-  },
-  {
-    date: "12 Juin",
-    title: "Cérémonie d'ouverture",
-    description: "Coup d'envoi du LBHX 2026 avec la parade des équipes.",
-    accent: "bg-orange-vif",
-  },
-  {
-    date: "12–13 Juin",
-    title: "Matchs en nocturne",
-    description: "Vivez l'intensité du Beach Handball sous les projecteurs, face à l'océan.",
-    accent: "bg-bleu-clair",
-  },
-  {
-    date: "12–14 Juin",
-    title: "Tournoi international Adultes",
-    description:
-      "Compétition Hommes et Femmes avec la présence de l'Équipe de France A Masculine.",
-    accent: "bg-orange-vif",
-  },
-  {
-    date: "13–14 Juin",
-    title: "Tournoi Jeunes & Shoot-out Contest",
-    description: "Place à la relève ! Tournoi dédié aux jeunes talents et concours de tirs spectaculaires.",
-    accent: "bg-bleu-clair",
-  },
-  {
-    date: "Dimanche 14 Juin",
-    title: "Les Finales & Shoot-out Contest",
-    description:
-      "Le All-Star Game du Beach Handball. Finales épiques pour clôturer le LBHX 2026.",
-    accent: "bg-bleu-clair",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Programme() {
+  const { tr } = useLanguage();
+
+  const events = [
+    { date: tr("programme.ev1.date"), title: tr("programme.ev1.title"), description: tr("programme.ev1.desc"), accent: "bg-bleu-clair" },
+    { date: tr("programme.ev2.date"), title: tr("programme.ev2.title"), description: tr("programme.ev2.desc"), accent: "bg-orange-vif" },
+    { date: tr("programme.ev3.date"), title: tr("programme.ev3.title"), description: tr("programme.ev3.desc"), accent: "bg-bleu-clair" },
+    { date: tr("programme.ev4.date"), title: tr("programme.ev4.title"), description: tr("programme.ev4.desc"), accent: "bg-orange-vif" },
+    { date: tr("programme.ev5.date"), title: tr("programme.ev5.title"), description: tr("programme.ev5.desc"), accent: "bg-bleu-clair" },
+    { date: tr("programme.ev6.date"), title: tr("programme.ev6.title"), description: tr("programme.ev6.desc"), accent: "bg-bleu-clair" },
+  ];
+
   return (
     <section id="programme" className="relative py-20 md:py-28 bg-bleu-atlantique overflow-hidden">
-      {/* Background image with overlay */}
       <div className="absolute inset-0">
         <img
           src="/images/IMG_7615.jpg"
@@ -56,7 +26,6 @@ export default function Programme() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,11 +34,11 @@ export default function Programme() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Programme 2026
+            {tr("programme.title")}
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
           <p className="mt-4 text-white/80 text-lg">
-            Lacanau Océan — Maison de la Glisse
+            {tr("programme.subtitle")}
           </p>
         </motion.div>
 
@@ -90,7 +59,7 @@ export default function Programme() {
             <div className="absolute inset-0 bg-gradient-to-t from-bleu-atlantique/60 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 text-white">
               <p className="text-base md:text-lg font-semibold text-shadow">
-                Matchs au coucher de soleil face à l&apos;Atlantique
+                {tr("programme.photoSunset")}
               </p>
             </div>
           </motion.div>
@@ -110,7 +79,7 @@ export default function Programme() {
             <div className="absolute inset-0 bg-gradient-to-t from-bleu-atlantique/60 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 text-white">
               <p className="text-base md:text-lg font-semibold text-shadow">
-                Compétition nocturne
+                {tr("programme.photoNight")}
               </p>
             </div>
           </motion.div>
@@ -132,13 +101,12 @@ export default function Programme() {
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            Télécharger la plaquette participants
+            {tr("programme.download")}
           </a>
         </motion.div>
 
         {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-white/30 md:-translate-x-px" />
 
           {events.map((event, index) => {
@@ -155,12 +123,10 @@ export default function Programme() {
                   isLeft ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Timeline dot */}
                 <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full border-4 border-bleu-atlantique shadow-md -translate-x-1/2 z-10">
                   <div className={`w-full h-full rounded-full ${event.accent}`} />
                 </div>
 
-                {/* Card */}
                 <div
                   className={`ml-12 md:ml-0 md:w-[calc(50%-2rem)] ${
                     isLeft ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"

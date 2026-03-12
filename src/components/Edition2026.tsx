@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Edition2026() {
+  const { tr } = useLanguage();
+
   return (
     <section
       id="edition-2026"
@@ -22,12 +25,11 @@ export default function Edition2026() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Édition 2026
+            {tr("edition.title")}
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
           <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
-            Découvrez l&apos;affiche officielle et les documents clés de
-            l&apos;édition 2026 du Lacanau Beach Handball Xperience.
+            {tr("edition.subtitle")}
           </p>
         </motion.div>
 
@@ -41,7 +43,7 @@ export default function Edition2026() {
         >
           <div className="bg-bleu-atlantique/80 px-6 py-3 text-left">
             <p className="text-sm font-semibold text-white/90 uppercase tracking-wide">
-              Affiche officielle — Tournoi 12–14 juin 2026
+              {tr("edition.poster")}
             </p>
           </div>
           <div className="bg-bleu-atlantique/40 flex items-center justify-center">
@@ -68,7 +70,7 @@ export default function Edition2026() {
             className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
           >
             <span className="text-lg">📄</span>
-            <span>Plaquette Partenaires</span>
+            <span>{tr("edition.plaquettePartenaires")}</span>
           </a>
           <a
             href="https://drive.google.com/file/d/1Rv5l1lYGuMUXlYf4hx8-yq_YDt1k5eEm/view?usp=sharing"
@@ -77,7 +79,7 @@ export default function Edition2026() {
             className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
           >
             <span className="text-lg">🇫🇷</span>
-            <span>Plaquette Participants (FR)</span>
+            <span>{tr("edition.plaquetteFR")}</span>
           </a>
           <a
             href="https://drive.google.com/file/d/1K3833shCZ1K0NdstoZxUIg2HmEWSyFZq/view?usp=sharing"
@@ -86,11 +88,10 @@ export default function Edition2026() {
             className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
           >
             <span className="text-lg">🇬🇧</span>
-            <span>Plaquette Participants (EN)</span>
+            <span>{tr("edition.plaquetteEN")}</span>
           </a>
         </motion.div>
       </div>
     </section>
   );
 }
-

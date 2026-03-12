@@ -1,12 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Boutique() {
+  const { tr } = useLanguage();
+
   return (
     <section id="boutique" className="py-20 md:py-28 bg-bleu-atlantique">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,15 +17,14 @@ export default function Boutique() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Boutique
+            {tr("boutique.title")}
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
           <p className="mt-4 text-white/80 text-lg">
-            Les produits officiels LBHX
+            {tr("boutique.subtitle")}
           </p>
         </motion.div>
 
-        {/* Coming soon */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,12 +47,10 @@ export default function Boutique() {
               />
             </svg>
             <h3 className="text-2xl font-bold text-white mb-3">
-              Bientôt disponible
+              {tr("boutique.soon")}
             </h3>
-            <p className="text-white/80 text-lg">
-              La boutique officielle LBHX arrive prochainement.
-              <br />
-              Découvrez bientôt les produits de l&apos;événement !
+            <p className="text-white/80 text-lg whitespace-pre-line">
+              {tr("boutique.soonDesc")}
             </p>
           </div>
         </motion.div>

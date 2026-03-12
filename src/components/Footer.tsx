@@ -1,16 +1,26 @@
 "use client";
 
+import { useLanguage } from "@/i18n/LanguageContext";
+
 export default function Footer() {
+  const { tr } = useLanguage();
+
+  const footerNav = [
+    { label: tr("nav.accueil"), href: "#accueil" },
+    { label: tr("nav.programme"), href: "#programme" },
+    { label: tr("nav.partenaires"), href: "#partenaires" },
+    { label: tr("nav.boutique"), href: "#boutique" },
+    { label: tr("nav.contact"), href: "#contact" },
+  ];
+
   return (
     <footer id="contact" className="bg-bleu-atlantique text-white">
-      {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Column 1 — About */}
           <div>
             <p className="text-white leading-relaxed mb-6">
-              Lacanau Beach Handball Xperience — Le concept N°1 de Beach
-              Handball en France. Du 12 au 14 juin 2026 à Lacanau Océan.
+              {tr("footer.about")}
             </p>
             {/* Logos */}
             <div className="flex items-center gap-4 mb-6">
@@ -68,16 +78,10 @@ export default function Footer() {
           {/* Column 2 — Navigation */}
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">
-              Navigation
+              {tr("footer.navigation")}
             </h3>
             <ul className="space-y-3">
-              {[
-                { label: "Accueil", href: "#accueil" },
-                { label: "Programme", href: "#programme" },
-                { label: "Partenaires", href: "#partenaires" },
-                { label: "Boutique", href: "#boutique" },
-                { label: "Contact", href: "#contact" },
-              ].map((link) => (
+              {footerNav.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
@@ -99,11 +103,11 @@ export default function Footer() {
           {/* Column 3 — Contact */}
           <div>
             <h3 className="text-lg font-bold mb-4 text-white">
-              Contact
+              {tr("footer.contactTitle")}
             </h3>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-white/80 mb-1">Organisation</p>
+                <p className="text-sm text-white/80 mb-1">{tr("footer.organisation")}</p>
                 <p className="text-white">
                   Paul Mourioux —{" "}
                   <a
@@ -125,7 +129,7 @@ export default function Footer() {
               </div>
               <div>
                 <p className="text-sm text-white/80 mb-1">
-                  Commission Partenaires
+                  {tr("footer.commission")}
                 </p>
                 <p className="text-white">
                   Hubert Gaget —{" "}
@@ -146,11 +150,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-white/80">
-            &copy; 2026 LBHX — Lacanau Beach Handball Xperience. Tous droits
-            réservés.
+            {tr("footer.copyright")}
           </p>
           <p className="text-sm text-white/80">
-            Lacanau Océan — Maison de la Glisse — Entrée gratuite
+            {tr("footer.location")}
           </p>
         </div>
       </div>

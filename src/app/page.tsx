@@ -1,3 +1,6 @@
+"use client";
+
+import { LanguageProvider } from "@/i18n/LanguageContext";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Edition2026 from "@/components/Edition2026";
@@ -8,10 +11,11 @@ import ChiffresCles from "@/components/ChiffresCles";
 import Partenaires from "@/components/Partenaires";
 import Boutique from "@/components/Boutique";
 import Footer from "@/components/Footer";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Home() {
   return (
-    <>
+    <LanguageProvider>
       <Header />
       <main>
         <Hero />
@@ -24,6 +28,7 @@ export default function Home() {
         <Boutique />
       </main>
       <Footer />
-    </>
+      <LanguageSwitcher />
+    </LanguageProvider>
   );
 }

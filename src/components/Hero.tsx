@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function Hero() {
+  const { tr } = useLanguage();
+
   return (
     <section id="accueil" className="relative h-screen w-full overflow-hidden">
       {/* Video background */}
@@ -19,9 +22,8 @@ export default function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-bleu-atlantique/80" />
 
-      {/* Content - pt compensates fixed header to avoid overlap */}
+      {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 pt-24 md:pt-28 pb-8">
-        {/* Logo au-dessus du titre */}
         <motion.img
           src="/images/story.psd.png"
           alt="Logo LBHX"
@@ -37,9 +39,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-shadow-lg leading-tight text-center"
         >
-            Lacanau Beach
+            {tr("hero.title1")}
             <br />
-            <span className="text-white">Handball Xperience</span>
+            <span className="text-white">{tr("hero.title2")}</span>
         </motion.h1>
 
         <motion.h2
@@ -48,7 +50,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-2 text-sm sm:text-base md:text-lg text-white/90 font-light text-shadow"
         >
-          Concept N°1 de Beach Handball en France
+          {tr("hero.subtitle")}
         </motion.h2>
 
         <motion.p
@@ -57,7 +59,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mt-3 text-base sm:text-lg md:text-xl text-white font-semibold text-shadow"
         >
-          Du 12 au 14 juin 2026
+          {tr("hero.date")}
         </motion.p>
 
         <motion.a
@@ -73,7 +75,7 @@ export default function Hero() {
           }}
           className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white font-semibold text-base px-6 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
         >
-          Découvrir l&apos;événement
+          {tr("hero.cta")}
         </motion.a>
 
         {/* Scroll indicator */}

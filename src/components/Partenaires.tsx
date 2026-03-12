@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const partners = [
   { name: "FFHandball + Ligue + Comité", logo: "/logo/ffHB-Ligue-Comite.png" },
@@ -35,6 +36,8 @@ function LogoCard({ name, logo }: { name: string; logo: string }) {
 }
 
 export default function Partenaires() {
+  const { tr } = useLanguage();
+
   return (
     <section id="partenaires" className="py-20 md:py-28 bg-bleu-atlantique overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,26 +49,23 @@ export default function Partenaires() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Nos Partenaires
+            {tr("partenaires.title")}
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
           <p className="mt-4 text-white/80 text-lg">
-            Ils nous font confiance et rendent l&apos;événement possible
+            {tr("partenaires.subtitle")}
           </p>
         </motion.div>
       </div>
 
-      {/* Marquee - two identical strips side by side for seamless loop */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-bleu-atlantique to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-bleu-atlantique to-transparent z-10 pointer-events-none" />
 
         <div className="flex animate-marquee w-max">
-          {/* First copy */}
           {partners.map((p, i) => (
             <LogoCard key={`a-${i}`} name={p.name} logo={p.logo} />
           ))}
-          {/* Second copy (identical, ensures seamless loop) */}
           {partners.map((p, i) => (
             <LogoCard key={`b-${i}`} name={p.name} logo={p.logo} />
           ))}

@@ -2,49 +2,51 @@
 
 import { motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter";
-
-const stats = [
-  {
-    value: 4344827,
-    suffix: "+",
-    label: "Volumes de contact",
-    sublabel: "Audience cumulée",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-      </svg>
-    ),
-  },
-  {
-    value: 25,
-    suffix: "%",
-    label: "Équipes internationales",
-    sublabel: "Diversité sportive",
-    icon: (
-      <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    value: 0,
-    suffix: "",
-    label: "Reconnu par l'EHF",
-    sublabel: "Fédération Européenne de Handball",
-    isText: true,
-    displayText: "EHF",
-    isLogo: true,
-    logoSrc: "/logo/EHF_EBT_logo_pos.png",
-    icon: null,
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function ChiffresCles() {
+  const { tr } = useLanguage();
+
+  const stats = [
+    {
+      value: 4344827,
+      suffix: "+",
+      label: tr("chiffres.stat1.label"),
+      sublabel: tr("chiffres.stat1.sublabel"),
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+        </svg>
+      ),
+    },
+    {
+      value: 25,
+      suffix: "%",
+      label: tr("chiffres.stat2.label"),
+      sublabel: tr("chiffres.stat2.sublabel"),
+      icon: (
+        <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+    },
+    {
+      value: 0,
+      suffix: "",
+      label: tr("chiffres.stat3.label"),
+      sublabel: tr("chiffres.stat3.sublabel"),
+      isText: true,
+      displayText: "EHF",
+      isLogo: true,
+      logoSrc: "/logo/EHF_EBT_logo_pos.png",
+      icon: null,
+    },
+  ];
+
   return (
     <section id="chiffres" className="py-20 md:py-28 bg-bleu-atlantique">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,12 +55,11 @@ export default function ChiffresCles() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold text-white">
-            Chiffres Clés
+            {tr("chiffres.title")}
           </h2>
           <div className="mt-4 w-24 h-1 bg-orange-vif mx-auto rounded-full" />
         </motion.div>
 
-        {/* Stats grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <motion.div
@@ -70,7 +71,7 @@ export default function ChiffresCles() {
               className="bg-white/10 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow duration-300 border border-white/20"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/15 text-white mb-6">
-                {"isLogo" in stat && stat.isLogo ? (
+                {stat.isLogo ? (
                   <img
                     src={stat.logoSrc as string}
                     alt="Logo EHF EBT"
@@ -85,7 +86,7 @@ export default function ChiffresCles() {
                 )}
               </div>
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                {"isText" in stat && stat.isText ? (
+                {stat.isText ? (
                   <span>{stat.displayText}</span>
                 ) : (
                   <AnimatedCounter
