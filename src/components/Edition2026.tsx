@@ -50,7 +50,7 @@ export default function Edition2026() {
             <img
               src="/images/canva-horizontal.png"
               alt="Affiche horizontale LBHX 2026"
-              className="w-full max-h-[420px] object-contain"
+              className="w-full h-72 md:h-96 object-cover"
             />
           </div>
         </motion.div>
@@ -74,7 +74,7 @@ export default function Edition2026() {
               <img
                 src="/images/plaquette_partenaire.png"
                 alt={tr("edition.plaquettePartenaires")}
-                className="w-full h-52 md:h-56 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                className="w-full h-48 md:h-52 object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
                 Plaquette Partenaires
@@ -91,7 +91,7 @@ export default function Edition2026() {
               <img
                 src="/images/plaquette_francaise.png"
                 alt={tr("edition.plaquetteFR")}
-                className="w-full h-52 md:h-56 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                className="w-full h-48 md:h-52 object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
                 Plaquette équipes françaises
@@ -108,7 +108,7 @@ export default function Edition2026() {
               <img
                 src="/images/plaquette_anglais.png"
                 alt={tr("edition.plaquetteEN")}
-                className="w-full h-52 md:h-56 object-cover group-hover:scale-[1.03] transition-transform duration-300"
+                className="w-full h-48 md:h-52 object-cover group-hover:scale-[1.02] transition-transform duration-300"
               />
               <div className="px-4 py-3 bg-bleu-atlantique/90 text-white text-sm font-semibold">
                 Plaquette équipes anglaises
