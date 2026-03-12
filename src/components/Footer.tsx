@@ -24,11 +24,13 @@ export default function Footer() {
             </p>
             {/* Logos */}
             <div className="flex items-center gap-4 mb-6">
-              <img
-                src="/images/story.psd.png"
-                alt="Logo LBHX"
-                className="h-24 w-24 md:h-32 md:w-32 object-contain drop-shadow-lg"
-              />
+              <div className="h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden ring-2 ring-white/30 bg-bleu-atlantique flex items-center justify-center">
+                <img
+                  src="/images/story.psd.png"
+                  alt="Logo LBHX"
+                  className="w-full h-full object-contain scale-[2.05]"
+                />
+              </div>
               <div className="h-16 w-16 md:h-20 md:w-20 rounded-full overflow-hidden ring-2 ring-white/30 bg-bleu-atlantique flex items-center justify-center">
                 <img
                   src="/images/logo sans coupe blanc.png"
