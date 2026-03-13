@@ -63,6 +63,9 @@ export default function Edition2026() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-12 max-w-5xl mx-auto"
         >
+          <p className="mb-4 text-center text-white/80 text-sm md:text-base">
+            {tr("edition.cards.hint")}
+          </p>
           <div className="grid gap-6 md:grid-cols-3">
             {/* Plaquette partenaires */}
             <a

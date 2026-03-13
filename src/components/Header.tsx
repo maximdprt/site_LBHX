@@ -5,6 +5,7 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const HELLOASSO_URL =
   "https://www.helloasso.com/associations/lacanau-ocehand/evenements/lacanau-beach-handball-xperience";
+const VOLONTAIRE_URL = "https://forms.office.com/e/kbAWvnQ348";
 
 export default function Header() {
   const { tr } = useLanguage();
@@ -96,7 +97,7 @@ export default function Header() {
           </div>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-3">
+          <nav className="hidden lg:flex items-center gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -110,26 +111,46 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href={HELLOASSO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 bg-red-600 hover:bg-red-700 text-white font-semibold text-base px-4 py-2 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              {tr("nav.inscription")}
-            </a>
+            <div className="ml-2 flex flex-col gap-1 items-stretch">
+              <a
+                href={HELLOASSO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-4 py-1.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center"
+              >
+                {tr("nav.inscription")}
+              </a>
+              <a
+                href={VOLONTAIRE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-bleu-clair hover:bg-bleu-clair/90 text-white font-semibold text-sm px-4 py-1.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center"
+              >
+                {tr("nav.volontaire")}
+              </a>
+            </div>
           </nav>
 
           {/* Mobile: inscription + hamburger */}
           <div className="flex items-center gap-2 lg:hidden">
-            <a
-              href={HELLOASSO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-3 py-2 rounded-full shadow-md transition-all duration-300"
-            >
-              {tr("nav.inscriptionShort")}
-            </a>
+            <div className="flex flex-col gap-1">
+              <a
+                href={HELLOASSO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-3 py-1.5 rounded-full shadow-md transition-all duration-300 text-center"
+              >
+                {tr("nav.inscriptionShort")}
+              </a>
+              <a
+                href={VOLONTAIRE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-bleu-clair hover:bg-bleu-clair/90 text-white font-semibold text-xs px-3 py-1.5 rounded-full shadow-md transition-all duration-300 text-center"
+              >
+                {tr("nav.volontaire")}
+              </a>
+            </div>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="text-white p-2 rounded-md hover:bg-white/10 transition-colors"

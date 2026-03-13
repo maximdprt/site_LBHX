@@ -143,6 +143,20 @@ export default function Footer() {
                   </a>
                 </p>
               </div>
+              <div>
+                <p className="text-sm text-white/80 mb-1">
+                  {tr("footer.commissionCom")}
+                </p>
+                <p className="text-white">
+                  Clément Andrac —{" "}
+                  <a
+                    href="mailto:andrac.clement@gmail.com"
+                    className="text-white hover:underline"
+                  >
+                    andrac.clement@gmail.com
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>

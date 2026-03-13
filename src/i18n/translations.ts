@@ -18,6 +18,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "nav.contact": "Contact",
     "nav.inscription": "Inscrire mon équipe",
     "nav.inscriptionShort": "Inscription",
+    "nav.volontaire": "Devenir volontaire",
 
     // Hero
     "hero.title1": "Lacanau Beach",
@@ -35,7 +36,8 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.plaquetteEN": "Plaquette Participants (EN)",
     "edition.card.partners": "Plaquette Partenaires",
     "edition.card.frTeams": "Plaquette équipes françaises",
-    "edition.card.enTeams": "Plaquette équipes anglaises",
+    "edition.card.enTeams": "Informational brochure for international teams",
+    "edition.cards.hint": "🖱️ Cliquez sur les visuels pour voir les plaquettes.",
 
     // Concept
     "concept.title": "Le Concept",
@@ -107,6 +109,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.contactTitle": "Contact",
     "footer.organisation": "Organisation",
     "footer.commission": "Commission Partenaires",
+    "footer.commissionCom": "Commission Communication",
     "footer.copyright": "© 2026 LBHX — Lacanau Beach Handball Xperience. Tous droits réservés.",
     "footer.location": "Lacanau Océan — Maison de la Glisse — Entrée gratuite",
 
@@ -123,6 +126,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "nav.contact": "Contact",
     "nav.inscription": "Register my team",
     "nav.inscriptionShort": "Register",
+    "nav.volontaire": "Become a volunteer",
 
     "hero.title1": "Lacanau Beach",
     "hero.title2": "Handball Xperience",
@@ -139,6 +143,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.card.partners": "Partners brochure",
     "edition.card.frTeams": "French teams brochure",
     "edition.card.enTeams": "English teams brochure",
+    "edition.cards.hint": "💻 Click the visuals to open the brochures in a new tab.",
 
     "concept.title": "The Concept",
     "concept.tagInternational": "International competition",
@@ -203,6 +208,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.contactTitle": "Contact",
     "footer.organisation": "Organisation",
     "footer.commission": "Partners Committee",
+    "footer.commissionCom": "Communications Committee",
     "footer.copyright": "© 2026 LBHX — Lacanau Beach Handball Xperience. All rights reserved.",
     "footer.location": "Lacanau Océan — Maison de la Glisse — Free entry",
 
@@ -218,6 +224,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "nav.contact": "Contacto",
     "nav.inscription": "Inscribir mi equipo",
     "nav.inscriptionShort": "Inscripción",
+    "nav.volontaire": "Ser voluntario",
 
     "hero.title1": "Lacanau Beach",
     "hero.title2": "Handball Xperience",
@@ -234,6 +241,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.card.partners": "Folleto de socios",
     "edition.card.frTeams": "Folleto equipos franceses",
     "edition.card.enTeams": "Folleto equipos ingleses",
+    "edition.cards.hint": "💻 Haz clic en las imágenes para abrir los folletos en una nueva pestaña.",
 
     "concept.title": "El Concepto",
     "concept.tagInternational": "Competición internacional",
@@ -298,6 +306,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.contactTitle": "Contacto",
     "footer.organisation": "Organización",
     "footer.commission": "Comisión de Socios",
+    "footer.commissionCom": "Comisión de Comunicación",
     "footer.copyright": "© 2026 LBHX — Lacanau Beach Handball Xperience. Todos los derechos reservados.",
     "footer.location": "Lacanau Océan — Maison de la Glisse — Entrada gratuita",
 
@@ -313,6 +322,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "nav.contact": "Kontakt",
     "nav.inscription": "Mein Team anmelden",
     "nav.inscriptionShort": "Anmeldung",
+    "nav.volontaire": "Freiwilliger werden",
 
     "hero.title1": "Lacanau Beach",
     "hero.title2": "Handball Xperience",
@@ -329,6 +339,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "edition.card.partners": "Partner-Broschüre",
     "edition.card.frTeams": "Broschüre französische Teams",
     "edition.card.enTeams": "Broschüre englische Teams",
+    "edition.cards.hint": "💻 Klicke auf die Bilder, um die Broschüren in einem neuen Tab zu öffnen.",
 
     "concept.title": "Das Konzept",
     "concept.tagInternational": "Internationaler Wettbewerb",
@@ -393,6 +404,7 @@ export const t: Record<Lang, Record<string, string>> = {
     "footer.contactTitle": "Kontakt",
     "footer.organisation": "Organisation",
     "footer.commission": "Partnerkommission",
+    "footer.commissionCom": "Kommunikationskommission",
     "footer.copyright": "© 2026 LBHX — Lacanau Beach Handball Xperience. Alle Rechte vorbehalten.",
     "footer.location": "Lacanau Océan — Maison de la Glisse — Freier Eintritt",
 
