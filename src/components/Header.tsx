@@ -26,8 +26,6 @@ export default function Header() {
 
   const navLinks = [
     { label: tr("nav.accueil"), href: "#accueil" },
-    { label: tr("nav.edition"), href: "#edition-2026" },
-    { label: tr("nav.programme"), href: "#programme" },
     { label: tr("nav.partenaires"), href: "#partenaires" },
     { label: tr("nav.boutique"), href: "#boutique" },
     { label: tr("nav.contact"), href: "#contact" },
@@ -111,12 +109,12 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <div className="ml-2 flex flex-col gap-1 items-stretch">
+            <div className="ml-2 flex items-center gap-2">
               <a
                 href={HELLOASSO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-4 py-1.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center"
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-sm px-4 py-1.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center whitespace-nowrap"
               >
                 {tr("nav.inscription")}
               </a>
@@ -124,7 +122,7 @@ export default function Header() {
                 href={VOLONTAIRE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-bleu-clair hover:bg-bleu-clair/90 text-white font-semibold text-sm px-4 py-1.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center"
+                className="bg-bleu-clair hover:bg-bleu-clair/90 text-white font-semibold text-sm px-4 py-1.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-center whitespace-nowrap"
               >
                 {tr("nav.volontaire")}
               </a>
@@ -133,12 +131,12 @@ export default function Header() {
 
           {/* Mobile: inscription + hamburger */}
           <div className="flex items-center gap-2 lg:hidden">
-            <div className="flex flex-col gap-1">
+            <div className="flex items-center gap-2">
               <a
                 href={HELLOASSO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-3 py-1.5 rounded-full shadow-md transition-all duration-300 text-center"
+                className="bg-red-600 hover:bg-red-700 text-white font-semibold text-xs px-3 py-1.5 rounded-full shadow-md transition-all duration-300 text-center whitespace-nowrap"
               >
                 {tr("nav.inscriptionShort")}
               </a>
@@ -146,7 +144,7 @@ export default function Header() {
                 href={VOLONTAIRE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-bleu-clair hover:bg-bleu-clair/90 text-white font-semibold text-xs px-3 py-1.5 rounded-full shadow-md transition-all duration-300 text-center"
+                className="bg-bleu-clair hover:bg-bleu-clair/90 text-white font-semibold text-xs px-3 py-1.5 rounded-full shadow-md transition-all duration-300 text-center whitespace-nowrap"
               >
                 {tr("nav.volontaire")}
               </a>

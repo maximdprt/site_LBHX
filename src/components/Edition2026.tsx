@@ -86,7 +86,7 @@ export default function Edition2026() {
 
             {/* Plaquette FR */}
             <a
-              href="https://drive.google.com/file/d/1Rv5l1lYGuMUXlYf4hx8-yq_YDt1k5eEm/view?usp=sharing"
+              href="https://drive.google.com/file/d/1fMF47XyLedKnDBclbCP9znZUMmfQQM_J/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group block rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
@@ -103,7 +103,7 @@ export default function Edition2026() {
 
             {/* Plaquette EN */}
             <a
-              href="https://drive.google.com/file/d/1K3833shCZ1K0NdstoZxUIg2HmEWSyFZq/view?usp=sharing"
+              href="https://drive.google.com/file/d/1EGTDjdFkuzXFEa3GWHojaabTy1ZdFn-P/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group block rounded-2xl overflow-hidden shadow-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
